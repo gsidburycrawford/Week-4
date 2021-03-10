@@ -1,0 +1,10 @@
+To be defined in our own words:
+
+REST: An design pattern used for a Distributed System
+Distributed Systems: An organized system that distributes tasks among a network of computers to accomplish a task
+APIs: A set of definitions and protocols for building and integrating application software. 
+Client: The end-user that sends requests to a service
+Server: Sends a response back to the Client depending on the request. 
+Cacheable: Able to retain the data from a session between a client and server for later use.
+Representation: Representation are data, metadata, and links defining how to get to other resources and/or states.
+Resource Methods: Types of requests sent from the client to the server. This includes GET, POST, PATCH, PUT, DELETE. 
