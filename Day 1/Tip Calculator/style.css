@@ -1,19 +1,19 @@
 body {
     font-family: 'Shadows Into Light Two', Helvetica, sans-serif;
-    background: #A3E165;
+    background: darkorchid;
   }
   #container {
     height: 80%;
     width: 30%;
     margin: 100px auto;
-    background: #E16565;
+    background: purple;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
   }
   h1 {
-    background: #900C3F;
+    background: darkslategray;
     color: white;
     margin: 0;
     padding: 10px 100px;
@@ -36,7 +36,7 @@ body {
   }
   #billamt {
     font-size: 14px;
-    color: red;
+    color: darkslateblue;
     background-color: #F7F7F7;
     width: 60%;
     padding: 5px 5px 8px 8px;
@@ -68,7 +68,7 @@ body {
     font-weight: bold;
     display: block;
     margin: 30px auto;
-    background: #900C3F;
+    background: pink;
     border-radius: 5px;
     width: 200px;
     height: 50px;
@@ -130,12 +130,69 @@ body {
     appearance: none;
     width: 25px;
     height: 25px;
-    background: #A3E165;
+    background: grey;
     cursor: pointer;
   }
   .slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
-    background: #A3E165;
+    background: purple;
     cursor: pointer;
   }
+
+  .rate-area {
+    align-self: center ;
+    align-content: center;
+    border-style: none;
+  }
+
+.rate-area:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rate-area:not(:checked) > label {
+    /* stars im */
+    float: right;
+    width: .80em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 40px;
+    line-height: 32px;
+    color: lightgrey;
+    margin-bottom: 10px !important;
+}
+
+.rate-area:not(:checked) > label:before {
+    content: '★';
+}
+
+.rate-area > input:checked ~ label {
+    color: #2A5DA0;
+    text-shadow: none;
+}
+
+.rate-area:not(:checked) > label:hover,
+.rate-area:not(:checked) > label:hover ~ label {
+    color:#2A5DA0;
+    
+}
+
+.rate-area > input:checked + label:hover,
+.rate-area > input:checked + label:hover ~ label,
+.rate-area > input:checked ~ label:hover,
+.rate-area > input:checked ~ label:hover ~ label,
+.rate-area > label:hover ~ input:checked ~ label {
+    color:#2A5DA0;
+    text-shadow: none;
+    
+}
+
+.rate-area > label:active {
+  position:relative;
+  
+ 
+
+}

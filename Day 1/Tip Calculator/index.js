@@ -1,8 +1,11 @@
 //Tip calculator function
+var starList = document.querySelector('#rate-area');
+var starRating;
 function calculateTip() {
     var billAmt = document.getElementById("billamt").value;
     var serviceQual = document.getElementById("serviceQual").value;
     var numOfPeople = document.getElementById("peopleamt").value;
+    
     //validate input
     if (billAmt === "" || serviceQual == 0) {
       alert("Error: Values Missing");
@@ -37,3 +40,7 @@ function calculateTip() {
   slider.oninput = function() {
     output.innerHTML = this.value;
   }
+
+  starList.addEventListener('click', function(event){
+    starRating = event.target.value;
+  });
